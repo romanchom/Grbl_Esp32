@@ -28,34 +28,43 @@
 
 #define MACHINE_NAME            "ESP32_V4"
 
-#define X_STEP_PIN              GPIO_NUM_12
-#define X_DIRECTION_PIN         GPIO_NUM_14
-#define Y_STEP_PIN              GPIO_NUM_26
-#define Y_DIRECTION_PIN         GPIO_NUM_15
-#define Z_STEP_PIN              GPIO_NUM_27
-#define Z_DIRECTION_PIN         GPIO_NUM_33
+/*#define X_STEP_PIN              GPIO_NUM_13
+#define X_DIRECTION_PIN         GPIO_NUM_12
 
-#define X_LIMIT_PIN             GPIO_NUM_17
-#define Y_LIMIT_PIN             GPIO_NUM_4
-#define Z_LIMIT_PIN             GPIO_NUM_16
+#define Y_STEP_PIN              GPIO_NUM_27
+#define Y_DIRECTION_PIN         GPIO_NUM_14
+#define Y2_STEP_PIN              GPIO_NUM_33
+#define Y2_DIRECTION_PIN         GPIO_NUM_25
+
+#define Z_STEP_PIN              GPIO_NUM_16
+#define Z_DIRECTION_PIN         GPIO_NUM_4
+
+#define SPINDLE_TYPE            SpindleType::OPTIDRIVE_E3 
+#define VFD_RS485_TXD_PIN		GPIO_NUM_21
+#define VFD_RS485_RXD_PIN		GPIO_NUM_22
+#define VFD_RS485_RTS_PIN		GPIO_NUM_17
+
+// #define CONTROL_RESET_PIN       GPIO_NUM_36
+#define PROBE_PIN               GPIO_NUM_32*/
+
+#define X_STEP_PIN              GPIO_NUM_22
+#define X_DIRECTION_PIN         GPIO_NUM_21
+
+#define Y_STEP_PIN              GPIO_NUM_18
+#define Y_DIRECTION_PIN         GPIO_NUM_5
+#define Y2_STEP_PIN              GPIO_NUM_16
+#define Y2_DIRECTION_PIN         GPIO_NUM_4
+
+#define Z_STEP_PIN              GPIO_NUM_13
+#define Z_DIRECTION_PIN         GPIO_NUM_15
+
+#define SPINDLE_TYPE            SpindleType::OPTIDRIVE_E3 
+#define VFD_RS485_TXD_PIN		GPIO_NUM_27
+#define VFD_RS485_RXD_PIN		GPIO_NUM_25
+#define VFD_RS485_RTS_PIN		GPIO_NUM_26
+
+#define CONTROL_RESET_PIN       GPIO_NUM_36
+#define PROBE_PIN               GPIO_NUM_33
 
 
-// OK to comment out to use pin for other features
-#define STEPPERS_DISABLE_PIN    GPIO_NUM_13
-
-#define SPINDLE_TYPE            SpindleType::PWM
-#define SPINDLE_OUTPUT_PIN      GPIO_NUM_2   // labeled SpinPWM
-#define SPINDLE_ENABLE_PIN      GPIO_NUM_22  // labeled SpinEnbl
-
-#define COOLANT_MIST_PIN        GPIO_NUM_21  // labeled Mist
-#define COOLANT_FLOOD_PIN       GPIO_NUM_25  // labeled Flood
-#define PROBE_PIN               GPIO_NUM_32  // labeled Probe
-
-
-/*
-#define CONTROL_SAFETY_DOOR_PIN GPIO_NUM_35  // labeled Door,  needs external pullup
-#define CONTROL_RESET_PIN       GPIO_NUM_34  // labeled Reset, needs external pullup
-#define CONTROL_FEED_HOLD_PIN   GPIO_NUM_36  // labeled Hold,  needs external pullup
-#define CONTROL_CYCLE_START_PIN GPIO_NUM_39  // labeled Start, needs external pullup
-*/
 

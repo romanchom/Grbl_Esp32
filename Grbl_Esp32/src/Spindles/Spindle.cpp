@@ -40,22 +40,24 @@
 #include "10vSpindle.h"
 #include "YL620Spindle.h"
 #include "TecoL510.h"
+#include "OptidriveE3Spindle.h"
 
 namespace Spindles {
     // An instance of each type of spindle is created here.
     // This allows the spindle to be dynamicly switched
 
-    Null     null;
-    PWM      pwm;
-    Relay    relay;
-    Laser    laser;
-    Dac      dac;
-    Huanyang huanyang;
-    H2A      h2a;
-    BESC     besc;
-    _10v     _10v;
-    YL620    yl620;
-    L510     l510;
+    Null        null;
+    PWM         pwm;
+    Relay       relay;
+    Laser       laser;
+    Dac         dac;
+    Huanyang    huanyang;
+    H2A         h2a;
+    BESC        besc;
+    _10v        _10v;
+    YL620       yl620;
+    L510        l510;
+    OptidriveE3 optidriveE3;
 
     void Spindle::select() {
         switch (static_cast<SpindleType>(spindle_type->get())) {
@@ -88,6 +90,8 @@ namespace Spindles {
                 break;
             case SpindleType::L510:
                 spindle = &l510;
+            case SpindleType::OPTIDRIVE_E3:
+                spindle = &optidriveE3;
                 break;
             case SpindleType::NONE:
             default:

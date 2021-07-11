@@ -567,7 +567,7 @@ namespace Spindles {
 
         set_speed_command(rpm, rpm_cmd);
 
-        // Sometimes sync_rpm is retained between different set_speed_command's. We don't want that - we want 
+        // Sometimes sync_rpm is retained between different set_speed_command's. We don't want that - we want
         // spindle sync to kick in after we set the speed. This forces that.
         _sync_rpm = UINT32_MAX;
 
